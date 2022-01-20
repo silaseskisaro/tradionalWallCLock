@@ -15,7 +15,7 @@ body{
 .clock{
   width:300px;
   height:300px;
-  background-color:rgba(255, 255, 255,.8);
+  background:linear-gradient(to right, rgb(247, 20, 255),rgb(0, 204, 255));
   border-radius: 50%;
   border:2px solid black;
   position: relative;
@@ -30,6 +30,22 @@ body{
   text-align: center;
   transform:rotate(var(--rotation));
   font-size:1.5rem;
+  color:white;
+}
+
+.clock .number::after{
+content: '';
+z-index: 11;
+width:15px;
+height:5px;
+background:linear-gradient(to right, rgb(247, 0, 255),rgb(102, 255, 0));
+top:0%;
+left:48%;
+position: absolute;
+border-bottom-left-radius: 25px;
+border-bottom-right-radius: 25px;
+
+
 }
 
 .clock .number1{--rotation:30deg;}
